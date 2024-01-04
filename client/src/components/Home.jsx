@@ -18,7 +18,7 @@ const Home = () => {
   // Function to fetch tasks
   const fetchTasks = () => {
     axios
-      .get("http://localhost:3001/get")
+      .get("https://mern-stack-todo-app-dun.vercel.app/get")
       .then((res) => {
         setTasks(res.data);
       })
@@ -37,7 +37,7 @@ const Home = () => {
 
   const handleDelete = (_id) => {
     axios
-      .delete("http://localhost:3001/delete", { data: { IdForDelete: _id } })
+      .delete("https://mern-stack-todo-app-dun.vercel.app/delete", { data: { IdForDelete: _id } })
       .then((res) => {
         console.log(res.data);
       })
@@ -46,7 +46,7 @@ const Home = () => {
 
   const handleCheckboxChange = (_id, isChecked) => {
     axios
-      .put("http://localhost:3001/update", { _id, isChecked })
+      .put("https://mern-stack-todo-app-dun.vercel.app/update", { _id, isChecked })
       .then((res) => {
         console.log(res.data);
       })
