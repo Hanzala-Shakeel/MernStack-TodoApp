@@ -6,7 +6,7 @@ const taskModel = require("./mongodb");
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://mern-stack-todo-app-frontend.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
