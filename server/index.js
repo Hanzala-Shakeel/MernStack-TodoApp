@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use(cors(
 {
-origin: ["https://mern-stack-todo-app-frontend.vercel.app
+origin: ["https://mern-stack-todo-app-frontend.vercel.app]
 methods: ["POST", "GET", "PUT", "DELETE"],
 credentials: true
 }
