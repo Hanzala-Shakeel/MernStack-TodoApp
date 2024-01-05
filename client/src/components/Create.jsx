@@ -6,7 +6,7 @@ const Create = () => {
 
   const handleUpload = async () => {
     axios
-      .post("http://localhost:3001/add", { todo: todo })
+      .post("https://mern-stack-todo-app-six.vercel.app/add", { todo: todo })
       .then((res) => {
         setTodo("")
         console.log(res.data);
