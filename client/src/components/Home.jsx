@@ -18,7 +18,7 @@ const Home = () => {
   // Function to fetch tasks
   const fetchTasks = () => {
     axios
-      .get("https://mern-stack-todo-app-dun.vercel.app/get")
+      .get("https://mern-stack-todo-app-six.vercel.app/get")
       .then((res) => {
         setTasks(res.data);
       })
