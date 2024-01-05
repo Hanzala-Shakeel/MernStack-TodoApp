@@ -37,7 +37,7 @@ const Home = () => {
 
   const handleDelete = (_id) => {
     axios
-      .delete("https://mern-stack-todo-app-dun.vercel.app/delete", { data: { IdForDelete: _id } })
+      .delete("https://mern-stack-todo-app-six.vercel.app/delete", { data: { IdForDelete: _id } })
       .then((res) => {
         console.log(res.data);
       })
@@ -46,7 +46,7 @@ const Home = () => {
 
   const handleCheckboxChange = (_id, isChecked) => {
     axios
-      .put("https://mern-stack-todo-app-dun.vercel.app/update", { _id, isChecked })
+      .put("https://mern-stack-todo-app-six.vercel.app/update", { _id, isChecked })
       .then((res) => {
         console.log(res.data);
       })
