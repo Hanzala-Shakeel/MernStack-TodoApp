@@ -1,11 +1,23 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "index.js", "use": "@vercel/node" }
-  ],
+  "functions": {
+    "api/add.js": {
+      "runtime": "@vercel/node"
+    },
+    "api/get.js": {
+      "runtime": "@vercel/node"
+    },
+    "api/delete.js": {
+      "runtime": "@vercel/node"
+    },
+    "api/update.js": {
+      "runtime": "@vercel/node"
+    }
+  },
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/api/add", "dest": "api/add.js" },
+    { "src": "/api/get", "dest": "api/get.js" },
+    { "src": "/api/delete", "dest": "api/delete.js" },
+    { "src": "/api/update", "dest": "api/update.js" }
   ]
 }
 
