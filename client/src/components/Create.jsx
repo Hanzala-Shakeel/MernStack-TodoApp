@@ -3,7 +3,7 @@ import axios from "axios";
 
 const Create = () => {
   const [todo, setTodo] = React.useState("");
-axios.defaults.withCredentials = true;
+  
   const handleUpload = async () => {
     axios
       .post("https://mern-stack-todo-app-six.vercel.app/add", { todo: todo })
