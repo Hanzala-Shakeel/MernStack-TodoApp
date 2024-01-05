@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Home = () => {
   const [tasks, setTasks] = useState([]);
-
+axios.defaults.withCredentials = true;
   // console.log(tasks);
   // useEffect(() => {
   //   axios
