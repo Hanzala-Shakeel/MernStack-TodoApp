@@ -4,7 +4,6 @@
       { "src": "index.js", "use": "@vercel/node" }
     ],
   "routes": [
-    { "handle": "filesystem" },
     { "src": "/add", "dest": "/index.js" },
     { "src": "/get", "dest": "/index.js" },
     { "src": "/delete", "dest": "/index.js" },
