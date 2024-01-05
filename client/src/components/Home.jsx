@@ -14,11 +14,11 @@ const Home = () => {
   //     })
   //     .catch((err) => console.log(err));
   // }, [tasks]);
-axios.defaults.withCredentials = true;
+
   // Function to fetch tasks
   const fetchTasks = () => {
     axios
-      .get("https://mern-stack-todo-app-six.vercel.app/get")
+      .get("http://localhost:3001/get")
       .then((res) => {
         setTasks(res.data);
       })
@@ -37,7 +37,7 @@ axios.defaults.withCredentials = true;
 
   const handleDelete = (_id) => {
     axios
-      .delete("https://mern-stack-todo-app-six.vercel.app/delete", { data: { IdForDelete: _id } })
+      .delete("http://localhost:3001/delete", { data: { IdForDelete: _id } })
       .then((res) => {
         console.log(res.data);
       })
@@ -46,7 +46,7 @@ axios.defaults.withCredentials = true;
 
   const handleCheckboxChange = (_id, isChecked) => {
     axios
-      .put("https://mern-stack-todo-app-six.vercel.app/update", { _id, isChecked })
+      .put("http://localhost:3001/update", { _id, isChecked })
       .then((res) => {
         console.log(res.data);
       })
