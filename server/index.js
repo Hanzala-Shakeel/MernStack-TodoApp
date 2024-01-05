@@ -4,13 +4,9 @@ const cors = require("cors");
 const taskModel = require("./mongodb");
 
 app.use(express.json());
-app.use(cors(
-    {
-        origin: ["https://mern-stack-todo-app-frontend.vercel.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-));
+app.use(cors({
+  origin: 'https://mern-stack-todo-app-frontend.vercel.app'
+}));
 
 app.get('/', function (req, res) {
     res.send("<h1>Home Page</h1>")
