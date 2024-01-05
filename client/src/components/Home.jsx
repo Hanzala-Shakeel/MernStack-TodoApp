@@ -14,7 +14,7 @@ const Home = () => {
   //     })
   //     .catch((err) => console.log(err));
   // }, [tasks]);
-
+axios.defaults.withCredentials = true;
   // Function to fetch tasks
   const fetchTasks = () => {
     axios
