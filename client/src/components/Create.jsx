@@ -3,8 +3,8 @@ import axios from "axios";
 
 const Create = () => {
   const [todo, setTodo] = React.useState("");
-  
-  const handleUpload = async () => {
+  if(todo!==""){
+    const handleUpload = async () => {
     axios
       .post("https://mern-stack-todo-app-six.vercel.app/add", { todo: todo })
       .then((res) => {
@@ -13,7 +13,7 @@ const Create = () => {
       })
       .catch((err) => console.log(err));
   };
-
+  }
   return (
     <div>
       <label>Add todos</label>
