@@ -9,7 +9,6 @@ app.use(cors({
   credentials: true
 }));
 
-
 app.use(express.json());
 
 app.get('/', function (req, res) {
