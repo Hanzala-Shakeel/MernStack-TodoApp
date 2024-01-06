@@ -4,10 +4,11 @@ const cors = require('cors');
 const taskModel = require('./mongodb');
 
 app.use(cors({
-  origin: 'https://mern-stack-todo-app-frontend.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed methods as an array
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
+
 
 app.use(express.json());
 
